@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Задание_7
+namespace Метод_4
 {
     class Program
     {
@@ -12,19 +12,16 @@ namespace Задание_7
         {
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine());
-            int c = Convert.ToInt32(Console.ReadLine());
-            CalcSum(a, b, c);
+            double P, S;
+            GetParam(a, b, out P, out S);
+            Console.WriteLine(P);
+            Console.WriteLine(S);
             Console.ReadKey();
         }
-        static void CalcSum(int a, int b)
+        static void GetParam(int a, int b, out double P, out double S)
         {
-            int S = a + b;
-            Console.WriteLine(S);
-        }
-        static void CalcSum(int a, int b, int c)
-        {
-            int S = a + b + c;
-            Console.WriteLine(S);
+            P = a + b + Math.Sqrt(a * a + b * b);
+            S = ((double)a) * b / 2;
         }
     }
 }

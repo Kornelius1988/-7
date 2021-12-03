@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Задание_7
+namespace ConsoleApp1
 {
     class Program
     {
@@ -16,15 +16,12 @@ namespace Задание_7
             CalcSum(a, b, c);
             Console.ReadKey();
         }
-        static void CalcSum(int a, int b)
+        static void CalcSum(params int[] numbers)
         {
-            int S = a + b;
+            int S = 0;
+            foreach (int n in numbers)
+                S += n;
             Console.WriteLine(S);
-        }
-        static void CalcSum(int a, int b, int c)
-        {
-            int S = a + b + c;
-            Console.WriteLine(S);
-        }
+        }       
     }
 }
